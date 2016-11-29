@@ -12,6 +12,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //百度地图的初始化
         SDKInitializer.initialize(this);
     }
 }

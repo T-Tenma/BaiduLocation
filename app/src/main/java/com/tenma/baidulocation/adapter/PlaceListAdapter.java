@@ -17,11 +17,16 @@ import java.util.List;
  */
 
 public class PlaceListAdapter extends BaseAdapter {
+    /** 存放位置信息 */
     List<PoiInfo> mList;
+    /** 加载布局 */
     LayoutInflater mInflater;
-    int notifyTip ;
+    /** 被选中的item的index */
     private int selectedPosition=0;
 
+    /**
+     *  ViewHolder
+     */
     private class MyViewHolder {
         TextView placeName;
         TextView placeAddree;
@@ -31,16 +36,6 @@ public class PlaceListAdapter extends BaseAdapter {
         super();
         this.mList = mList;
         this.mInflater = mInflater;
-        notifyTip = -1 ;
-    }
-
-
-    /**
-     * 设置第几个item被选择
-     * @param notifyTip
-     */
-    public void setNotifyTip(int notifyTip) {
-        this.notifyTip = notifyTip;
     }
 
     @Override
@@ -62,7 +57,10 @@ public class PlaceListAdapter extends BaseAdapter {
         return position;
     }
 
-    public  void clearSelection(int p){
+    /**
+     *  设置被选中item的index
+     */
+    public void setSelection(int p) {
         selectedPosition = p;
     }
 
