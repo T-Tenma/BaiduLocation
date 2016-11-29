@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BaiduLocation</string>
+    <string name="location">定位</string>
+</resources>
